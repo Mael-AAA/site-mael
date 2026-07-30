@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon projet — Maël BAUDET</title>
+  <meta name="description" content="PizzaOrder : un agent vocal IA qui prend les commandes des pizzerias 24h/24, piloté depuis une application mobile.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { accent: '#f7b8d4' },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body id="top" class="bg-black text-white antialiased">
+
+  <!-- ===== Barre de navigation ===== -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-black nav-glow">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between gap-4 px-5 py-4">
+      <a href="index.html" class="font-display font-black text-2xl sm:text-3xl tracking-wide">Maël BAUDET</a>
+      <div class="flex items-center gap-4 sm:gap-8">
+        <a href="projet.html" class="font-typewriter uppercase tracking-widest text-xs sm:text-sm text-accent">Mon projet</a>
+        <a href="etagere.html" class="font-typewriter uppercase tracking-widest text-xs sm:text-sm hover:text-accent transition-colors">Mon étagère</a>
+        <a href="index.html#contact" class="font-typewriter uppercase tracking-widest text-xs sm:text-sm bg-accent text-black px-4 sm:px-6 py-2 rounded-full btn-glow hover:bg-pink-300 transition-colors">Contactez-moi</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pt-[76px]">
+
+    <section class="border-b border-neutral-800">
+      <div class="max-w-6xl mx-auto px-5 py-16">
+        <h1 class="font-display font-black text-5xl sm:text-6xl">Mon projet</h1>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-5 py-14 space-y-8 text-lg leading-relaxed">
+      <p>Les vendredis et samedis soir, les pizzerias sont dans le rush. Chaque appel manqué, c'est une commande de perdue.</p>
+      <p>J'ai donc créé un système complet où un agent vocal IA prend en charge les appels entrants 24h/24 pour prendre les commandes à emporter, gérer les réservations et répondre aux questions fréquentes.</p>
+      <p>Si la situation dépasse l'IA, l'appel est transféré à un humain.</p>
+      <p>Les gérants pilotent tout depuis une application mobile dédiée.</p>
+      <p>Ce que j'ai construit :</p>
+      <ul class="list-disc list-inside space-y-2 marker:text-accent">
+        <li>Un agent vocal conversationnel (Retell AI)</li>
+        <li>Une application mobile pour les gérants (React Native)</li>
+        <li>Des workflows qui connectent l'agent vocal et l'app (n8n)</li>
+        <li>Un backend complet (Supabase)</li>
+      </ul>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 pt-6">
+        <img src="assets/img/projet-1.jpg" alt="Écran de démarrage de l'application PizzaOrder" class="img-bw w-full border border-neutral-800">
+        <img src="assets/img/projet-2.jpg" alt="Écran de connexion de l'application" class="img-bw w-full border border-neutral-800">
+        <img src="assets/img/projet-3.jpg" alt="Écran des commandes en attente" class="img-bw w-full border border-neutral-800">
+        <img src="assets/img/projet-4.jpg" alt="Écran des réglages et du panier moyen" class="img-bw w-full border border-neutral-800">
+        <img src="assets/img/projet-5.jpg" alt="Historique des commandes" class="img-bw w-full border border-neutral-800">
+      </div>
+
+      <p class="pt-6">Plusieurs fonctionnalités ont été ajoutées depuis comme la possibilité de régler la cadence (nombre de pizzas/10 minutes) ou encore de pouvoir activer et désactiver les produits afin que le preneur de commande IA sache la disponibilité en temps réel des produits.</p>
+
+      <!-- Emplacement prévu pour les captures d'écran des workflows n8n et de l'agent Retell AI.
+           Ajoutez les fichiers dans assets/img puis décommentez :
+      <div class="space-y-8 pt-6">
+        <img src="assets/img/workflow-n8n-1.png" alt="Workflow n8n : webhook, code JavaScript et requête HTTP" class="w-full max-w-3xl mx-auto">
+        <img src="assets/img/workflow-n8n-2.png" alt="Workflow n8n : agent IA connecté à OpenRouter et à la carte" class="w-full max-w-3xl mx-auto">
+        <img src="assets/img/agent-retell.png" alt="Arbre de conversation de l'agent vocal dans Retell AI" class="w-full max-w-3xl mx-auto">
+      </div>
+      -->
+
+      <p class="pt-6 pb-10">Projet développé personnellement de A à Z dans une logique de déploiement en condition réelle. MVP fonctionnel.</p>
+    </section>
+
+    <!-- ===== Pied de page ===== -->
+    <footer class="border-t border-neutral-800">
+      <div class="max-w-6xl mx-auto px-5 py-14">
+        <div class="flex flex-wrap items-center justify-between gap-6">
+          <span class="font-display font-black text-3xl sm:text-4xl">Maël BAUDET</span>
+          <div class="flex gap-5">
+            <a href="#" aria-label="LinkedIn" class="hover:opacity-70 transition-opacity">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="hover:opacity-70 transition-opacity">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+            </a>
+          </div>
+        </div>
+        <p class="text-neutral-500 mt-12">© 2026 All rights reserved.<br>Designed with rigor and intent.</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Bouton retour en haut -->
+  <a href="#top" id="backToTop" aria-label="Retour en haut" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-accent flex items-center justify-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5"/>
+    </svg>
+  </a>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<svg width="100%" viewBox="0 0 680 620" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <!-- Contour du cœur décomposé en chemins pour le texte -->
+  <!-- Moitié gauche du cœur (de la pointe vers le haut gauche) -->
+  <path id="left-outer" d="M 340,530 C 200,430 60,340 60,220 C 60,130 130,70 210,70 C 260,70 305,95 340,130"/>
+  <!-- Moitié droite du cœur (de la pointe vers le haut droit) -->
+  <path id="right-outer" d="M 340,130 C 375,95 420,70 470,70 C 550,70 620,130 620,220 C 620,340 480,430 340,530"/>
+
+  <!-- Arc intérieur gauche -->
+  <path id="left-inner" d="M 340,490 C 220,400 100,320 100,220 C 100,150 155,105 215,105 C 258,105 295,128 340,165"/>
+  <!-- Arc intérieur droit -->
+  <path id="right-inner" d="M 340,165 C 385,128 422,105 465,105 C 525,105 580,150 580,220 C 580,320 460,400 340,490"/>
+
+  <!-- Arc encore plus intérieur gauche -->
+  <path id="left-mid" d="M 340,445 C 245,370 145,300 145,220 C 145,170 183,140 223,140 C 260,140 290,162 340,200"/>
+  <!-- Arc encore plus intérieur droit -->
+  <path id="right-mid" d="M 340,200 C 390,162 420,140 457,140 C 497,140 535,170 535,220 C 535,300 435,370 340,445"/>
+
+  <!-- Arc central gauche -->
+  <path id="left-center" d="M 340,395 C 270,335 195,280 195,220 C 195,190 215,172 238,172 C 265,172 292,192 340,235"/>
+  <!-- Arc central droit -->
+  <path id="right-center" d="M 340,235 C 388,192 415,172 442,172 C 465,172 485,190 485,220 C 485,280 410,335 340,395"/>
+
+  <!-- Arc le plus intérieur -->
+  <path id="innermost" d="M 250,220 C 265,196 296,178 320,178 C 340,178 360,178 380,178 C 404,178 435,196 450,220 C 435,244 404,262 380,262 C 360,262 340,262 320,262 C 296,262 265,244 250,220"/>
+<mask id="imagine-text-gaps-7ajm3y" maskUnits="userSpaceOnUse"><rect x="0" y="0" width="680" height="620" fill="white"/><rect x="41.322994232177734" y="175.90316772460938" width="278.2015380859375" height="349.0678405761719" fill="black" rx="2"/><rect x="351.88018798828125" y="53.273677825927734" width="286.871826171875" height="321.1851806640625" fill="black" rx="2"/><rect x="81.27949523925781" y="97.74323272705078" width="242.61582946777344" height="389.3099365234375" fill="black" rx="2"/><rect x="349.2610168457031" y="88.27975463867188" width="249.49392700195312" height="208.82131958007812" fill="black" rx="2"/><rect x="126.25390625" y="175.65972900390625" width="202.31060791015625" height="268.916015625" fill="black" rx="2"/><rect x="345.48138427734375" y="123.28648376464844" width="208.350830078125" height="173.86158752441406" fill="black" rx="2"/><rect x="175.13052368164062" y="228.51708984375" width="155.04373168945312" height="167.6197509765625" fill="black" rx="2"/><rect x="341.1113586425781" y="152.903564453125" width="165.00799560546875" height="78.52861022949219" fill="black" rx="2"/><rect x="328.66729736328125" y="208.0189666748047" width="22.665422439575195" height="24.8403377532959" fill="black" rx="2"/></mask></defs>
+
+<!-- Chemin du cœur visible (trait) pour les zones sans texte -->
+<path d="M 340,530 C 200,430 60,340 60,220 C 60,100 150,50 230,55 C 280,58 315,85 340,120 C 365,85 400,58 450,55 C 530,50 620,100 620,220 C 620,340 480,430 340,530 Z" fill="none" stroke="black" stroke-width="1.2" opacity="0.08" mask="url(#imagine-text-gaps-7ajm3y)" style="fill:none;stroke:rgb(255, 255, 255);color:rgb(255, 255, 255);stroke-width:1.2px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.08;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- Texte sur les arcs extérieurs -->
+<text font-family="Arial,sans-serif" font-size="16" fill="black" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+  <textPath href="#left-outer" startOffset="4%" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Basketball · Intelligence Artificielle · Aviron · Magie · Hypnose</textPath>
+</text>
+<text font-family="Arial,sans-serif" font-size="16" fill="black" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+  <textPath href="#right-outer" startOffset="4%" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Echecs · Randonné · Ski de piste · Ski de fond · Snowboard · Business</textPath>
+</text>
+
+<!-- Texte sur les arcs intérieurs -->
+<text font-family="Arial,sans-serif" font-size="16" fill="black" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+  <textPath href="#left-inner" startOffset="4%" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Médiation · Lecture · Cinéma · Voyage · Développement Personnel</textPath>
+</text>
+<text font-family="Arial,sans-serif" font-size="16" fill="black" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+  <textPath href="#right-inner" startOffset="4%" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Trail · Informatique · Startup · Ikigai · Famille · Amis</textPath>
+</text>
+
+<!-- Texte sur les arcs mid -->
+<text font-family="Arial,sans-serif" font-size="16" fill="black" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+  <textPath href="#left-mid" startOffset="4%" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Rêve lucide · Miel · E-commerce · Agence IA</textPath>
+</text>
+<text font-family="Arial,sans-serif" font-size="16" fill="black" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+  <textPath href="#right-mid" startOffset="4%" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Hacker · Musique · Mentalisme · Montagne</textPath>
+</text>
+
+<!-- Texte sur les arcs centraux -->
+<text font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="black" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:18px;font-weight:700;text-anchor:start;dominant-baseline:auto">
+  <textPath href="#left-center" startOffset="5%" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:18px;font-weight:700;text-anchor:start;dominant-baseline:auto">Reblochon · Basketball</textPath>
+</text>
+<text font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="black" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:18px;font-weight:700;text-anchor:start;dominant-baseline:auto">
+  <textPath href="#right-center" startOffset="5%" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:18px;font-weight:700;text-anchor:start;dominant-baseline:auto">Famille · Ikigai · Rêve</textPath>
+</text>
+
+<!-- Mot central -->
+<text x="340" y="227" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="black" style="fill:rgb(255, 255, 255);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial, sans-serif;font-size:18px;font-weight:700;text-anchor:middle;dominant-baseline:auto">✦</text>
+</svg>

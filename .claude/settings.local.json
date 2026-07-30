@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:mbaudet967.wixsite.com)",
+      "Bash(curl -sL -o assets/cv-mael-baudet.pdf \"https://771040e4-1a0e-43f2-a309-03ff16725b9f.filesusr.com/ugd/1db9de_6220c0c3ce9e4e7fa8919021fa45cf1e.pdf\")",
+      "Bash(curl -sL --fail -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\)\" -o assets/cv-mael-baudet.pdf \"https://771040e4-1a0e-43f2-a309-03ff16725b9f.filesusr.com/ugd/1db9de_6220c0c3ce9e4e7fa8919021fa45cf1e.pdf\")",
+      "Bash(echo \"exit: $?\")",
+      "PowerShell(Invoke-WebRequest -Uri \"https://771040e4-1a0e-43f2-a309-03ff16725b9f.filesusr.com/ugd/1db9de_6220c0c3ce9e4e7fa8919021fa45cf1e.pdf\" -OutFile \"assets\\\\cv-mael-baudet.pdf\" -UserAgent \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\)\")",
+      "PowerShell(Start-Process -WindowStyle Hidden python -ArgumentList \"-m\",\"http.server\",\"8377\" -WorkingDirectory \"C:\\\\Users\\\\aimsn\\\\Documents\\\\AAA\\\\Site_web_perso\"; Start-Sleep 2; \\(Invoke-WebRequest -Uri \"http://localhost:8377/index.html\" -UseBasicParsing\\).StatusCode)",
+      "PowerShell(Get-Command python, python3, py, node -ErrorAction SilentlyContinue)",
+      "Bash(py -m http.server 8377)",
+      "Bash(curl -s -o /dev/null -w \"index: %{http_code}\\\\n\" http://localhost:8377/index.html)",
+      "Bash(curl -s -o /dev/null -w \"projet: %{http_code}\\\\n\" http://localhost:8377/projet.html)",
+      "Bash(curl -s -o /dev/null -w \"etagere: %{http_code}\\\\n\" http://localhost:8377/etagere.html)",
+      "Bash(curl -s -o /dev/null -w \"coeur: %{http_code}\\\\n\" http://localhost:8377/assets/img/coeur-blanc.svg)",
+      "Bash(node \"C:\\\\Users\\\\aimsn\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-aimsn-Documents-AAA-Site-web-perso\\\\3aca987a-66f6-414a-af52-56513d1fd5d0\\\\scratchpad\\\\serve.js\")",
+      "Bash(curl -s -o /dev/null -w \"merci: %{http_code}\\\\n\" http://localhost:8377/merci.html)",
+      "Bash(curl -s -o /dev/null -w \"cv: %{http_code}\\\\n\" http://localhost:8377/assets/cv-mael-baudet.pdf)",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Read(//c/Program Files \\\\\\(x86\\\\\\)/Microsoft/Edge/Application/**)",
+      "Bash(ffmpeg -version)",
+      "Bash(sed -i 's/class=\"grayscale /class=\"img-bw /g' index.html etagere.html)",
+      "Bash(sed -i 's|src=\"assets/img/usmb.jpg\" alt=\"Logo Université Savoie Mont Blanc\" class=\"|src=\"assets/img/usmb.jpg\" alt=\"Logo Université Savoie Mont Blanc\" class=\"img-bw |' index.html)",
+      "Bash(sed -i 's|alt=\"Écran \\\\\\(.*\\\\\\)\" class=\"w-full border|alt=\"Écran \\\\1\" class=\"img-bw w-full border|; s|alt=\"Historique des commandes\" class=\"w-full border|alt=\"Historique des commandes\" class=\"img-bw w-full border|' projet.html)"
+    ]
+  }
+}

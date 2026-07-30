@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merci — Maël BAUDET</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { accent: '#f7b8d4' },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="bg-black text-white antialiased min-h-screen flex items-center justify-center px-5">
+  <div class="text-center max-w-lg">
+    <h1 class="font-display font-black text-5xl text-accent">Merci !</h1>
+    <p class="mt-8 text-lg leading-relaxed">Votre message a bien été envoyé.<br>Je vous répondrai dès que possible.</p>
+    <a href="index.html" class="inline-block mt-10 bg-accent text-black px-8 py-3 rounded-full font-typewriter uppercase tracking-widest text-sm hover:bg-pink-300 transition-colors">Retour à l'accueil</a>
+  </div>
+</body>
+</html>

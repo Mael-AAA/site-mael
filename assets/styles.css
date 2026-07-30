@@ -1,0 +1,75 @@
+/* ===== Polices et styles personnalisés (complément de Tailwind) ===== */
+
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-typewriter {
+  font-family: 'Special Elite', 'Courier New', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Lueur rose sous la barre de navigation */
+.nav-glow {
+  box-shadow: 0 10px 25px -8px rgba(247, 184, 212, 0.75);
+}
+
+/* Lueur rose autour du bouton Contactez-moi */
+.btn-glow {
+  box-shadow: 0 0 18px 2px rgba(247, 184, 212, 0.55);
+}
+
+/* ===== Cœur des centres d'intérêt ===== */
+.coeur-wrapper {
+  opacity: 0.14;
+  transition: opacity 0.7s ease;
+  cursor: pointer;
+}
+
+.coeur-wrapper:hover {
+  opacity: 1;
+}
+
+/* ===== Images noir et blanc qui se colorent au survol ===== */
+.img-bw {
+  filter: grayscale(1);
+  transition: filter 0.5s ease;
+}
+
+.img-bw:hover {
+  filter: grayscale(0);
+}
+
+/* ===== Bouton retour en haut ===== */
+#backToTop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+#backToTop.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Décalage des ancres sous la barre de navigation fixe */
+section[id] {
+  scroll-margin-top: 96px;
+}
+
+/* Petite vague rose décorative */
+.squiggle {
+  color: #f7b8d4;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  line-height: 1;
+}

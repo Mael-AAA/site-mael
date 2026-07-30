@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maël BAUDET — Portfolio</title>
+  <meta name="description" content="Portfolio de Maël BAUDET : formations, expériences, compétences et projets.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { accent: '#f7b8d4' },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body id="top" class="bg-black text-white antialiased">
+
+  <!-- ===== Barre de navigation ===== -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-black nav-glow">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between gap-4 px-5 py-4">
+      <a href="index.html" class="font-display font-black text-2xl sm:text-3xl tracking-wide">Maël BAUDET</a>
+      <div class="flex items-center gap-4 sm:gap-8">
+        <a href="projet.html" class="font-typewriter uppercase tracking-widest text-xs sm:text-sm hover:text-accent transition-colors">Mon projet</a>
+        <a href="etagere.html" class="font-typewriter uppercase tracking-widest text-xs sm:text-sm hover:text-accent transition-colors">Mon étagère</a>
+        <a href="index.html#contact" class="font-typewriter uppercase tracking-widest text-xs sm:text-sm bg-accent text-black px-4 sm:px-6 py-2 rounded-full btn-glow hover:bg-pink-300 transition-colors">Contactez-moi</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pt-[76px]">
+
+    <!-- ===== Héro : portrait + Qui suis je ===== -->
+    <section id="accueil" class="grid lg:grid-cols-2 max-w-7xl mx-auto">
+      <div class="relative min-h-[420px] lg:min-h-[720px]">
+        <img src="assets/img/portrait.png" alt="Portrait de Maël BAUDET" class="absolute inset-0 w-full h-full object-cover object-top">
+      </div>
+      <div class="flex flex-col gap-4 p-6 lg:p-10 justify-center">
+        <a href="#bienvenue" class="border border-neutral-600 hover:border-accent transition-colors p-8 lg:p-10 block">
+          <h2 class="font-display text-4xl lg:text-5xl py-10">Qui suis je ?</h2>
+        </a>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="#formations" class="border border-neutral-600 hover:border-accent transition-colors p-8 block">
+            <h3 class="font-display text-2xl lg:text-3xl py-8">Formations</h3>
+          </a>
+          <a href="#experiences" class="border border-neutral-600 hover:border-accent transition-colors p-8 block">
+            <h3 class="font-display text-2xl lg:text-3xl py-8">Expériences</h3>
+          </a>
+          <a href="#competences" class="border border-neutral-600 hover:border-accent transition-colors p-8 block">
+            <h3 class="font-display text-2xl lg:text-3xl py-8">Compétences</h3>
+          </a>
+          <a href="#interets" class="border border-neutral-600 hover:border-accent transition-colors p-8 block">
+            <h3 class="font-display text-2xl lg:text-3xl py-8">Centre d'intérêt</h3>
+          </a>
+        </div>
+        <a href="#contact" class="bg-accent text-black p-6 flex items-center gap-4 hover:bg-pink-300 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
+          </svg>
+          <span class="font-display text-3xl">Contact</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== Bienvenue ===== -->
+    <section id="bienvenue" class="max-w-6xl mx-auto px-5 py-20">
+      <h1 class="font-display font-black text-5xl sm:text-6xl text-accent">Bienvenue</h1>
+      <div class="grid lg:grid-cols-[1fr_auto] gap-10 items-center mt-12">
+        <div>
+          <h2 class="font-display font-bold text-2xl sm:text-3xl">Je m'appelle Maël BAUDET</h2>
+          <p class="mt-10 max-w-xl text-lg leading-relaxed">
+            En navigant sur ce site, vous aurez un aperçu de qui je suis :
+            mes compétences, mes expériences, ma personnalité, et bien plus encore...
+          </p>
+          <div class="mt-12 flex flex-col items-center gap-4">
+            <a href="assets/video-presentation.mp4" target="_blank" class="border border-neutral-400 rounded-full px-8 py-3 hover:border-accent hover:text-accent transition-colors">Vidéo de présentation</a>
+            <a href="assets/cv-mael-baudet.pdf" target="_blank" class="border border-neutral-400 rounded-full px-8 py-3 hover:border-accent hover:text-accent transition-colors">Mon CV</a>
+          </div>
+        </div>
+        <img src="assets/img/paysage-hiver.png" alt="Paysage d'hiver au Québec" class="img-bw w-full max-w-sm justify-self-center lg:justify-self-end">
+      </div>
+    </section>
+
+    <!-- ===== Formations ===== -->
+    <section id="formations" class="max-w-6xl mx-auto px-5 py-16 border-t border-neutral-800">
+      <h2 class="font-display font-bold text-4xl sm:text-5xl">Formations</h2>
+
+      <div class="mt-12 space-y-16 border-l border-accent/60 pl-6">
+        <div class="grid md:grid-cols-[1fr_auto] gap-8 items-start">
+          <div>
+            <span class="inline-block border border-accent text-accent px-3 py-1.5">Bachelor Universitaire de Technologie (BUT) Techniques de Commercialisation (TC)</span>
+            <p class="mt-4 leading-relaxed">
+              Spécialités : Marketing Digital, E-business et Entrepreneuriat<br>
+              Annecy - Université Savoie Mont Blanc - IUT<br>
+              2024-2027 : deuxième année en cours
+            </p>
+          </div>
+          <img src="assets/img/usmb.jpg" alt="Logo Université Savoie Mont Blanc" class="img-bw w-40 md:w-48 justify-self-center md:justify-self-end">
+        </div>
+
+        <div class="grid md:grid-cols-[1fr_auto] gap-8 items-start">
+          <div>
+            <span class="inline-block border border-accent text-accent px-3 py-1.5">Techniques d'administration et de gestion (6 mois d'étude au Canada)</span>
+            <p class="mt-4 leading-relaxed">
+              Spécialités : Marketing et stratégies commerciales<br>
+              Québec - Collège de Rimouski<br>
+              janv. 2026 – juin 2026
+            </p>
+          </div>
+          <img src="assets/img/rimouski.jpg" alt="Collège de Rimouski" class="img-bw w-40 md:w-48 justify-self-center md:justify-self-end">
+        </div>
+
+        <div class="grid md:grid-cols-[1fr_auto] gap-8 items-start">
+          <div>
+            <span class="inline-block border border-accent text-accent px-3 py-1.5">Baccalauréat Général</span>
+            <p class="mt-4 leading-relaxed">
+              Spécialités : Mathématiques, Sciences Économiques et Sociales<br>
+              Annecy - Lycée Charles Baudelaire<br>
+              2024
+            </p>
+          </div>
+          <img src="assets/img/baudelaire.jpg" alt="Lycée Charles Baudelaire" class="img-bw w-40 md:w-48 justify-self-center md:justify-self-end">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Expériences ===== -->
+    <section id="experiences" class="max-w-6xl mx-auto px-5 py-16 border-t border-neutral-800">
+      <h2 class="font-display font-bold text-4xl sm:text-5xl">Expériences</h2>
+
+      <div class="mt-12 grid md:grid-cols-3 gap-10">
+        <article class="text-center">
+          <div class="border border-accent/70 px-6 py-3 font-typewriter tracking-widest text-neutral-300 shadow-[6px_6px_0_rgba(247,184,212,0.15)]">(Stage)</div>
+          <h3 class="font-display font-bold text-2xl sm:text-3xl mt-8">Thérapie Verte SAS</h3>
+          <p class="text-neutral-400 mt-6">juin et juillet 2025 - France, Paris</p>
+          <ul class="text-left mt-8 space-y-4 list-disc list-inside marker:text-accent">
+            <li>conception d'une boutique e-commerce</li>
+            <li>création d'une première campagne de communication</li>
+            <li>aide au développement de la marque</li>
+          </ul>
+        </article>
+
+        <article class="text-center">
+          <div class="border border-accent/70 px-6 py-3 font-typewriter tracking-widest text-neutral-300 shadow-[6px_6px_0_rgba(247,184,212,0.15)]">(Bénévolat)</div>
+          <h3 class="font-display font-bold text-2xl sm:text-3xl mt-8">Café 5e Saison</h3>
+          <p class="text-neutral-400 mt-6">janvier à juin 2026 - Canada, Rimouski</p>
+          <ul class="text-left mt-8 space-y-4 list-disc list-inside marker:text-accent">
+            <li>service au bar</li>
+            <li>aide et soutien aux étudiants</li>
+          </ul>
+        </article>
+
+        <article class="text-center">
+          <div class="border border-accent/70 px-6 py-3 font-typewriter tracking-widest text-neutral-300 shadow-[6px_6px_0_rgba(247,184,212,0.15)]">(CDD)</div>
+          <h3 class="font-display font-bold text-2xl sm:text-3xl mt-8">The Bowling Balexert</h3>
+          <p class="text-neutral-400 mt-6">juin et juillet 2023 - Suisse, Genève</p>
+          <ul class="text-left mt-8 space-y-4 list-disc list-inside marker:text-accent">
+            <li>service au bar</li>
+            <li>gestion de la caisse</li>
+            <li>contact clientèle</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Compétences ===== -->
+    <section id="competences" class="max-w-6xl mx-auto px-5 py-16 border-t border-neutral-800">
+      <h2 class="font-display font-bold text-4xl sm:text-5xl">Compétences</h2>
+
+      <div class="mt-12 grid md:grid-cols-2 gap-10 items-start">
+        <ul class="space-y-6 text-lg list-disc list-inside marker:text-accent">
+          <li>Maîtrise des techniques de vente</li>
+          <li>Connaissance avancée en intelligence artificielle</li>
+          <li>Création de e-business</li>
+        </ul>
+        <div class="bg-neutral-900 border border-neutral-700 p-8">
+          <h3 class="font-typewriter tracking-[0.3em] text-accent text-2xl text-center">Logiciels</h3>
+          <p class="mt-6 text-lg leading-loose">
+            Canva, Claude code, Excel, Google cloud, N8n,<br class="hidden sm:block">
+            Retell AI, Shopify, Supabase, VS code, Word...
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Centre d'intérêt ===== -->
+    <section id="interets" class="max-w-6xl mx-auto px-5 py-16 border-t border-neutral-800">
+      <h2 class="font-display font-bold text-4xl sm:text-5xl">Centre d'intérêt</h2>
+      <p class="mt-4 flex items-center gap-3 text-neutral-400 italic">
+        <span class="squiggle">⟅</span> Survolez le coeur avec votre souris
+      </p>
+
+      <div class="coeur-wrapper relative max-w-2xl mx-auto mt-6">
+        <img src="assets/img/basket.png" alt="" aria-hidden="true" class="absolute left-[22%] top-[8%] w-10 opacity-40">
+        <img src="assets/img/coeur-blanc.svg" alt="Cœur composé de mes centres d'intérêt : basketball, intelligence artificielle, famille, ikigai, rêve, reblochon, musique, montagne, ski, voyage...">
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="border-t border-neutral-800">
+      <div class="max-w-6xl mx-auto px-5 py-20">
+        <h2 class="font-display font-black text-5xl sm:text-6xl">Discutons</h2>
+
+        <div class="mt-14 grid sm:grid-cols-3 gap-10 text-center sm:text-left">
+          <div>
+            <h3 class="font-display text-accent text-2xl">Téléphone</h3>
+            <a href="tel:+33767303140" class="font-typewriter block mt-4 hover:text-accent transition-colors">+33 7 67 30 31 40</a>
+          </div>
+          <div>
+            <h3 class="font-display text-accent text-2xl">E-mail</h3>
+            <a href="mailto:mbaudet967@gmail.com" class="font-typewriter block mt-4 hover:text-accent transition-colors">mbaudet967@gmail.com</a>
+          </div>
+          <div>
+            <h3 class="font-display text-accent text-2xl">Réseaux sociaux</h3>
+            <div class="flex gap-5 mt-4 justify-center sm:justify-start">
+              <a href="#" aria-label="LinkedIn" class="hover:opacity-70 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+              </a>
+              <a href="#" aria-label="Instagram" class="hover:opacity-70 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <form action="https://formsubmit.co/mbaudet967@gmail.com" method="POST" class="mt-14">
+          <input type="hidden" name="_subject" value="Nouveau message depuis votre site perso">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" id="formNext" value="">
+
+          <div class="grid sm:grid-cols-3 gap-6">
+            <label class="block">
+              <span class="font-typewriter text-sm">Prénom</span>
+              <input type="text" name="Prénom" class="mt-2 w-full bg-transparent border border-white px-3 py-2.5 focus:border-accent focus:outline-none">
+            </label>
+            <label class="block">
+              <span class="font-typewriter text-sm">Nom</span>
+              <input type="text" name="Nom" class="mt-2 w-full bg-transparent border border-white px-3 py-2.5 focus:border-accent focus:outline-none">
+            </label>
+            <label class="block">
+              <span class="font-typewriter text-sm">E-mail *</span>
+              <input type="email" name="E-mail" required class="mt-2 w-full bg-transparent border border-white px-3 py-2.5 focus:border-accent focus:outline-none">
+            </label>
+          </div>
+          <label class="block mt-6">
+            <span class="font-typewriter text-sm">Message</span>
+            <textarea name="Message" rows="5" class="mt-2 w-full bg-transparent border border-white px-3 py-2.5 focus:border-accent focus:outline-none"></textarea>
+          </label>
+          <div class="flex justify-end mt-6">
+            <button type="submit" class="bg-accent text-black px-14 py-3 hover:bg-pink-300 transition-colors">Envoyer</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== Pied de page ===== -->
+    <footer class="border-t border-neutral-800">
+      <div class="max-w-6xl mx-auto px-5 py-14">
+        <div class="flex flex-wrap items-center justify-between gap-6">
+          <span class="font-display font-black text-3xl sm:text-4xl">Maël BAUDET</span>
+          <div class="flex gap-5">
+            <a href="#" aria-label="LinkedIn" class="hover:opacity-70 transition-opacity">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="hover:opacity-70 transition-opacity">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+            </a>
+          </div>
+        </div>
+        <p class="text-neutral-500 mt-12">© 2026 All rights reserved.<br>Designed with rigor and intent.</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Bouton retour en haut -->
+  <a href="#top" id="backToTop" aria-label="Retour en haut" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-accent flex items-center justify-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5"/>
+    </svg>
+  </a>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
