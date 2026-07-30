@@ -21,7 +21,8 @@
       "Bash(ffmpeg -version)",
       "Bash(sed -i 's/class=\"grayscale /class=\"img-bw /g' index.html etagere.html)",
       "Bash(sed -i 's|src=\"assets/img/usmb.jpg\" alt=\"Logo Université Savoie Mont Blanc\" class=\"|src=\"assets/img/usmb.jpg\" alt=\"Logo Université Savoie Mont Blanc\" class=\"img-bw |' index.html)",
-      "Bash(sed -i 's|alt=\"Écran \\\\\\(.*\\\\\\)\" class=\"w-full border|alt=\"Écran \\\\1\" class=\"img-bw w-full border|; s|alt=\"Historique des commandes\" class=\"w-full border|alt=\"Historique des commandes\" class=\"img-bw w-full border|' projet.html)"
+      "Bash(sed -i 's|alt=\"Écran \\\\\\(.*\\\\\\)\" class=\"w-full border|alt=\"Écran \\\\1\" class=\"img-bw w-full border|; s|alt=\"Historique des commandes\" class=\"w-full border|alt=\"Historique des commandes\" class=\"img-bw w-full border|' projet.html)",
+      "WebFetch(domain:developers.cloudflare.com)"
     ]
   }
 }
