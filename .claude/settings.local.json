@@ -32,7 +32,21 @@
       "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless=new --disable-gpu --force-device-scale-factor=1 --window-size=390,844 --virtual-time-budget=3000 --dump-dom http://localhost:8379/index.html?probe)",
       "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --force-device-scale-factor=1 --window-size=1280,900 --virtual-time-budget=3000 --dump-dom http://localhost:8379/index.html?probe)",
       "Bash(pkill -f \"serve.js 8379\")",
-      "Bash(curl -s -o /dev/null -w \"site principal port 8377: %{http_code}\\\\n\" http://localhost:8377/index.html)"
+      "Bash(curl -s -o /dev/null -w \"site principal port 8377: %{http_code}\\\\n\" http://localhost:8377/index.html)",
+      "Bash(node \"C:\\\\Users\\\\aimsn\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-aimsn-Documents-AAA-Site-web-perso\\\\3aca987a-66f6-414a-af52-56513d1fd5d0\\\\scratchpad\\\\serve.js\" 8390)",
+      "Bash(awk '{o+=gsub\\(/{/,\"{\"\\); c+=gsub\\(/}/,\"}\"\\)} END{print \"ouvrantes:\",o,\" fermantes:\",c}' assets/styles.css)",
+      "Bash(node \"C:\\\\Users\\\\aimsn\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-aimsn-Documents-AAA-Site-web-perso\\\\3aca987a-66f6-414a-af52-56513d1fd5d0\\\\scratchpad\\\\diag.js\")",
+      "Bash(pkill -f \"diag.js\")",
+      "Bash(pkill -f \"chrome.*headless\")",
+      "Bash(node --check assets/jeu.js)",
+      "Bash(node --check assets/mascotte.js)",
+      "Bash(awk '{o+=gsub\\(/{/,\"{\"\\); c+=gsub\\(/}/,\"}\"\\)} END{print \"CSS accolades -> ouvrantes:\",o,\" fermantes:\",c}' assets/styles.css)",
+      "Bash(node \"C:\\\\Users\\\\aimsn\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-aimsn-Documents-AAA-Site-web-perso\\\\3aca987a-66f6-414a-af52-56513d1fd5d0\\\\scratchpad\\\\shot-jeu.js\")",
+      "Bash(node \"C:\\\\Users\\\\aimsn\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-aimsn-Documents-AAA-Site-web-perso\\\\3aca987a-66f6-414a-af52-56513d1fd5d0\\\\scratchpad\\\\diag2.js\")",
+      "Bash(node \"C:\\\\Users\\\\aimsn\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-aimsn-Documents-AAA-Site-web-perso\\\\3aca987a-66f6-414a-af52-56513d1fd5d0\\\\scratchpad\\\\align.js\")",
+      "Bash(node \"C:\\\\Users\\\\aimsn\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-aimsn-Documents-AAA-Site-web-perso\\\\3aca987a-66f6-414a-af52-56513d1fd5d0\\\\scratchpad\\\\regard.js\")",
+      "Bash(node \"C:\\\\Users\\\\aimsn\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-aimsn-Documents-AAA-Site-web-perso\\\\3aca987a-66f6-414a-af52-56513d1fd5d0\\\\scratchpad\\\\regard2.js\")",
+      "Bash(node \"C:\\\\Users\\\\aimsn\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-aimsn-Documents-AAA-Site-web-perso\\\\3aca987a-66f6-414a-af52-56513d1fd5d0\\\\scratchpad\\\\sim-regard.js\")"
     ]
   }
 }

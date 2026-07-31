@@ -91,6 +91,295 @@ body {
   pointer-events: auto;
 }
 
+/* ===== Mascotte : la petite flamme accrochée au pied de page ===== */
+
+/* Le pied de page sert de perchoir : il devient le repère de position */
+footer {
+  position: relative;
+}
+
+#mascotte {
+  position: absolute;
+  /* Alignée sur le début du mot « Maël » du pied de page : le contenu est
+     dans un conteneur centré de 72rem avec 1.25rem de marge intérieure.
+     Sur écran étroit, elle retombe simplement à 1.5rem du bord. */
+  left: max(1.25rem, calc(50% - 556px));
+  top: 0;
+  /* Remontée de 82 % : ses petits bras dépassent sous la bordure,
+     comme si elle s'y agrippait */
+  transform: translateY(-82%);
+  width: 58px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  z-index: 20;
+  transition: opacity 0.4s ease;
+}
+
+@media (min-width: 640px) {
+  #mascotte {
+    width: 74px;
+  }
+}
+
+.mascotte-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* Colorisation progressive. La règle de survol vient avant les étapes :
+   à spécificité égale, c'est la dernière écrite qui gagne. */
+#mascotte .mascotte-svg {
+  filter: grayscale(1);
+  transition: filter 1.2s ease, transform 0.3s ease;
+}
+
+/* Au survol elle grandit un peu pour montrer qu'elle est cliquable,
+   mais la couleur ne revient qu'au clic. */
+#mascotte:hover .mascotte-svg {
+  transform: scale(1.08);
+}
+
+#mascotte.etape-1 .mascotte-svg {
+  filter: grayscale(0.55);
+}
+
+#mascotte.etape-2 .mascotte-svg {
+  filter: grayscale(0.12);
+}
+
+#mascotte.etape-3 .mascotte-svg {
+  filter: grayscale(0) drop-shadow(0 0 12px rgba(255, 165, 60, 0.55));
+}
+
+/* Pendant la partie, seule la flamme du jeu reste visible */
+body.jeu-en-cours #mascotte {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --- Animations de vie --- */
+
+.flamme-vacille {
+  transform-box: fill-box;
+  transform-origin: bottom center;
+  animation: vacille 2.6s ease-in-out infinite;
+}
+
+@keyframes vacille {
+  0%, 100% { transform: scale(1, 1) translateX(0); }
+  25%      { transform: scale(0.985, 1.025) translateX(-1.5px); }
+  50%      { transform: scale(1.02, 0.98) translateX(1.5px); }
+  75%      { transform: scale(0.99, 1.012) translateX(0.5px); }
+}
+
+.yeux {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: cligne 5.5s ease-in-out infinite;
+}
+
+@keyframes cligne {
+  0%, 90%, 100% { transform: scaleY(1); }
+  94%           { transform: scaleY(0.08); }
+}
+
+.pupilles {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: regarde 7s ease-in-out infinite;
+}
+
+@keyframes regarde {
+  0%, 28%   { transform: translate(0, 0); }
+  38%, 52%  { transform: translate(-3px, 1.5px); }
+  62%, 82%  { transform: translate(3px, -1px); }
+  92%, 100% { transform: translate(0, 0); }
+}
+
+/* ===== Panneau du mini-jeu (se déplie au-dessus du pied de page) ===== */
+
+/* Le jeu occupe l'écran : rien n'est repoussé plus bas, aucun défilement */
+.jeu-panneau {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s;
+}
+
+.jeu-panneau.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* La barre de navigation se rétracte vers le haut pendant la partie */
+header {
+  transition: transform 0.4s ease;
+}
+
+body.jeu-en-cours header {
+  transform: translateY(-100%);
+}
+
+.jeu-cadre {
+  width: 100%;
+  max-width: 44rem;
+  /* Le cadre s'ouvre en s'écartant, comme si la page faisait place au jeu */
+  opacity: 0;
+  transform: scaleY(0.8) translateY(14px);
+  transition: transform 0.42s cubic-bezier(0.2, 0.8, 0.3, 1), opacity 0.35s ease;
+}
+
+.jeu-panneau.open .jeu-cadre {
+  opacity: 1;
+  transform: none;
+}
+
+.jeu-hud {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-family: 'Special Elite', 'Courier New', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: #d4d4d4;
+  padding: 0.75rem 0;
+}
+
+.jeu-hud b {
+  color: #f7b8d4;
+}
+
+#jeuFermer {
+  margin-left: auto;
+  background: none;
+  border: 0;
+  color: #d4d4d4;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0 0.25rem;
+}
+
+#jeuFermer:hover {
+  color: #f7b8d4;
+}
+
+/* Les trois vies */
+.jeu-vies {
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.jeu-vies span {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: #ffa53c;
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+.jeu-vies span.perdue {
+  background: #3f3f3f;
+  opacity: 0.5;
+}
+
+/* Le terrain de jeu */
+.jeu-zone {
+  position: relative;
+  /* S'adapte aux écrans courts, notamment en mode paysage */
+  height: min(340px, 58vh);
+  border: 1px solid #2f2f2f;
+  border-radius: 0.5rem;
+  background: radial-gradient(ellipse at 50% 120%, rgba(247, 184, 212, 0.09), transparent 62%);
+  overflow: hidden;
+  touch-action: none;   /* le doigt dirige la flamme sans faire défiler la page */
+  cursor: none;
+}
+
+#jeuCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* La flamme du jeu : debout, posée au sol */
+#jeuMascotte {
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  width: 76px;
+  will-change: transform;
+  transition: filter 0.5s ease;
+}
+
+#jeuMascotte .mascotte-svg {
+  filter: grayscale(0) drop-shadow(0 0 14px rgba(255, 165, 60, 0.5));
+}
+
+/* Pendant la partie, le regard suit le déplacement : on coupe donc
+   l'animation « regarde autour », qui sinon primerait sur le calcul du jeu. */
+#jeuMascotte .pupilles {
+  animation: none;
+}
+
+#jeuMascotte.touche-1 .mascotte-svg {
+  filter: grayscale(0.4);
+}
+
+#jeuMascotte.touche-2 .mascotte-svg {
+  filter: grayscale(0.75);
+}
+
+#jeuMascotte.invincible {
+  animation: clignote 0.28s steps(2) infinite;
+}
+
+@keyframes clignote {
+  0%   { opacity: 1; }
+  100% { opacity: 0.25; }
+}
+
+.jeu-message {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.75rem;
+  color: #fff;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.jeu-message.visible {
+  opacity: 1;
+}
+
+/* Respect des préférences système : on calme les animations décoratives */
+@media (prefers-reduced-motion: reduce) {
+  .flamme-vacille,
+  .yeux,
+  .pupilles,
+  #jeuMascotte.invincible {
+    animation: none;
+  }
+}
+
 /* Décalage des ancres sous la barre de navigation fixe */
 section[id] {
   scroll-margin-top: 96px;
