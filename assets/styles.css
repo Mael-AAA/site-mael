@@ -39,6 +39,36 @@ body {
   opacity: 1;
 }
 
+/* ===== Menu burger (mobile) ===== */
+
+/* Le panneau se déplie en douceur sous la barre de navigation */
+.mobile-menu {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+
+.mobile-menu.open {
+  max-height: 340px;
+}
+
+/* Les trois barres se transforment en croix à l'ouverture */
+.burger-bar {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#burger.open .burger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+#burger.open .burger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+#burger.open .burger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ===== Images noir et blanc qui se colorent au survol ===== */
 .img-bw {
   filter: grayscale(1);

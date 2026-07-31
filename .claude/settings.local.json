@@ -22,7 +22,17 @@
       "Bash(sed -i 's/class=\"grayscale /class=\"img-bw /g' index.html etagere.html)",
       "Bash(sed -i 's|src=\"assets/img/usmb.jpg\" alt=\"Logo Université Savoie Mont Blanc\" class=\"|src=\"assets/img/usmb.jpg\" alt=\"Logo Université Savoie Mont Blanc\" class=\"img-bw |' index.html)",
       "Bash(sed -i 's|alt=\"Écran \\\\\\(.*\\\\\\)\" class=\"w-full border|alt=\"Écran \\\\1\" class=\"img-bw w-full border|; s|alt=\"Historique des commandes\" class=\"w-full border|alt=\"Historique des commandes\" class=\"img-bw w-full border|' projet.html)",
-      "WebFetch(domain:developers.cloudflare.com)"
+      "WebFetch(domain:developers.cloudflare.com)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8377/index.html)",
+      "Read(//c/Users/aimsn/AppData/Local/Temp/claude/c--Users-aimsn-Documents-AAA-Site-web-perso/3aca987a-66f6-414a-af52-56513d1fd5d0/scratchpad/**)",
+      "Bash(node -e ' *)",
+      "Bash(pkill -f \"serve.js\")",
+      "Bash(node \"C:\\\\Users\\\\aimsn\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-aimsn-Documents-AAA-Site-web-perso\\\\3aca987a-66f6-414a-af52-56513d1fd5d0\\\\scratchpad\\\\serve.js\" 8378)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --force-device-scale-factor=1 --window-size=390,844 --virtual-time-budget=3000 --dump-dom http://localhost:8379/index.html?probe)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless=new --disable-gpu --force-device-scale-factor=1 --window-size=390,844 --virtual-time-budget=3000 --dump-dom http://localhost:8379/index.html?probe)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --force-device-scale-factor=1 --window-size=1280,900 --virtual-time-budget=3000 --dump-dom http://localhost:8379/index.html?probe)",
+      "Bash(pkill -f \"serve.js 8379\")",
+      "Bash(curl -s -o /dev/null -w \"site principal port 8377: %{http_code}\\\\n\" http://localhost:8377/index.html)"
     ]
   }
 }
