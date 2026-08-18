@@ -218,10 +218,19 @@ if (zoneCoeur) {
   imgBasket.src = 'assets/img/basket.png';
   dessinerEtatInitial();
 
-  // Au redimensionnement, on repart d'une zone propre
+  // Au redimensionnement, on repart d'une zone propre — mais seulement si
+  // la taille de la zone a vraiment changé. Sur téléphone, la barre
+  // d'adresse qui se cache ou réapparaît au défilement déclenche des
+  // « resize » sans que la zone bouge : il ne faut pas effacer la
+  // peinture en cours dans ce cas-là.
   let minuterieRedim = null;
   window.addEventListener('resize', () => {
     clearTimeout(minuterieRedim);
-    minuterieRedim = setTimeout(dessinerEtatInitial, 150);
+    minuterieRedim = setTimeout(() => {
+      const boite = zoneCoeur.getBoundingClientRect();
+      if (Math.round(boite.width) !== largeur || Math.round(boite.height) !== hauteur) {
+        dessinerEtatInitial();
+      }
+    }, 150);
   });
 }
