@@ -6,7 +6,7 @@ Contexte du projet pour les prochaines sessions Claude Code.
 
 Site portfolio personnel de **Maël BAUDET**, étudiant en BUT Techniques de
 Commercialisation (Annecy, USMB). C'est le **clone d'un ancien site Wix**
-(`https://mbaudet967.wixsite.com/mael`) refait en HTML/CSS/JS pur, sans CMS.
+(`https://mbaudet967.wixsite.com/mael`) refait en HTML/CSS/JS pur.
 
 
 ## Stack et contraintes
