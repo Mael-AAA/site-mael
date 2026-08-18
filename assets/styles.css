@@ -28,14 +28,68 @@ body {
   box-shadow: 0 0 18px 2px rgba(247, 184, 212, 0.55);
 }
 
-/* ===== Cœur des centres d'intérêt ===== */
-.coeur-wrapper {
-  opacity: 0.14;
-  transition: opacity 0.7s ease;
+/* ===== Cœur des centres d'intérêt : carte à gratter =====
+   Quatre couches superposées (voir index.html) : la peinture du pinceau,
+   le texte des passions, le voile à effacer (fond noir + cœur blanc) et
+   la copie du voile pour le fondu de retour. Logique dans main.js. */
+.coeur-scratch {
+  aspect-ratio: 680 / 620;   /* même proportion que coeur-blanc.svg */
   cursor: pointer;
+  touch-action: none;        /* le doigt peint au lieu de faire défiler */
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
-.coeur-wrapper:hover {
+/* L'ordre d'empilement des quatre couches, rendu explicite pour ne
+   dépendre que des z-index et pas de l'ordre des éléments dans la page. */
+.coeur-scratch canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#coeurPeinture {
+  z-index: 1;
+}
+
+#coeurVoile {
+  z-index: 3;
+}
+
+.coeur-passions {
+  position: absolute;
+  inset: 3%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Colonne étroite et texte plus grand : le bloc forme un carré qui
+     remplit la hauteur du rectangle au lieu d'un pavé horizontal */
+  padding: 2% 13%;
+  text-align: center;
+  color: #333;
+  font-size: clamp(0.8rem, 3.45vw, 1.45rem);
+  line-height: 2;
+}
+
+/* La copie du voile revient en fondu après l'inactivité */
+.coeur-retour {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+  /* Garde la copie peinte même invisible : sans cela, Chrome peut jouer
+     le premier fondu avec une texture vide (noir, sans le cœur) et le
+     cœur ne réapparaît qu'après coup. */
+  will-change: opacity;
+}
+
+.coeur-retour.visible {
   opacity: 1;
 }
 

@@ -1,0 +1,28 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>body{margin:0}iframe{width:100vw;height:900px;border:0}</style>
+<iframe id="f" src="index.html"></iframe>
+<script>
+  // Harnais temporaire : zigzag a t=1s, puis le retour automatique se declenche a ~9s
+  const f = document.getElementById('f');
+  f.addEventListener('load', () => {
+    const doc = f.contentDocument;
+    const zone = doc.getElementById('coeurScratch');
+    zone.scrollIntoView({ block: 'center' });
+    setTimeout(() => {
+      const r = zone.getBoundingClientRect();
+      const opts = (x, y) => ({ clientX: x, clientY: y, pointerType: 'mouse', bubbles: true });
+      const pts = [];
+      for (let i = 0; i <= 80; i++) {
+        const t = i / 80;
+        pts.push([
+          r.left + 40 + t * (r.width - 80),
+          r.top + r.height * 0.5 + Math.sin(t * 14) * r.height * 0.34
+        ]);
+      }
+      zone.dispatchEvent(new PointerEvent('pointerdown', opts(pts[0][0], pts[0][1])));
+      pts.forEach((p) => zone.dispatchEvent(new PointerEvent('pointermove', opts(p[0], p[1]))));
+      zone.dispatchEvent(new PointerEvent('pointerup', opts(pts[79][0], pts[79][1])));
+    }, 1000);
+  });
+</script>

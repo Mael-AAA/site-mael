@@ -51,7 +51,7 @@ remettre dans l'ordre d'origine.
 ## Conventions
 
 - **Tout est en français** : textes, commentaires HTML/CSS/JS, noms de classes
-  perso (`.coeur-wrapper`, `.img-bw`). Garder cette cohérence.
+  perso (`.coeur-scratch`, `.img-bw`). Garder cette cohérence.
 - Les commentaires HTML utilisent le format `<!-- ===== Titre ===== -->`.
 - La barre de navigation, le pied de page et le bouton « retour en haut » sont
   **dupliqués à l'identique** dans les 3 pages. Toute modification de l'un doit
@@ -64,7 +64,7 @@ remettre dans l'ordre d'origine.
 | Quoi | Où | Comment |
 |---|---|---|
 | Images N&B → couleur au survol | `.img-bw` dans `styles.css` | `filter: grayscale(1)` + transition 0.5 s. Appliqué à **toutes** les images du site, portrait compris. |
-| Le cœur des centres d'intérêt | `.coeur-wrapper` | Opacité 0.14 au repos, 1 au survol, fondu 0.7 s. Le SVG `coeur-blanc.svg` est une copie de `coeur.svg` avec le noir remplacé par du blanc. |
+| Le cœur des centres d'intérêt | `#coeurScratch` | Carte à gratter : le cœur blanc (voile canvas) est visible d'emblée ; le pinceau (survol souris, doigt sur mobile) l'efface et peint le fond du rectangle des passions en rose↔blanc. Retour en fondu après 8 s d'inactivité. Logique dans `main.js`, couches décrites en commentaire dans `index.html`. `coeur-blanc.svg` a un `width/height` explicite (requis pour `drawImage`). `touch-action: none` sur la zone : le doigt y peint au lieu de faire défiler. |
 | Bouton « Contactez-moi » | les 3 pages | Pointe vers `index.html#contact` → descend au formulaire en bas de la page principale. Exigence explicite du propriétaire. |
 | Menu burger | `< 768 px` | Liens en `hidden md:flex`, bouton `#burger` en `md:hidden`. Le panneau `#mobileMenu` s'ouvre via la classe `.open` (transition sur `max-height`). Les 3 barres se transforment en croix. Se referme au clic sur un lien et avec Échap. |
 | Retour en haut | `#backToTop` | Apparaît après 400 px de défilement. |

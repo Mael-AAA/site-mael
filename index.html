@@ -221,12 +221,19 @@
     <section id="interets" class="max-w-6xl mx-auto px-5 py-16 border-t border-neutral-800">
       <h2 class="font-display font-bold text-4xl sm:text-5xl">Centres d'intérêt</h2>
       <p class="mt-4 flex items-center gap-3 text-neutral-400 italic">
-        <span class="squiggle">⟅</span> Survolez le coeur avec votre souris
+        <span class="squiggle">⟅</span> Effacez le cœur avec votre souris ou votre doigt pour découvrir mes passions
       </p>
 
-      <div class="coeur-wrapper relative max-w-2xl mx-auto mt-6">
-        <img src="assets/img/basket.png" alt="" aria-hidden="true" class="absolute left-[22%] top-[8%] w-10 opacity-40">
-        <img src="assets/img/coeur-blanc.svg" alt="Cœur composé de mes centres d'intérêt : basketball, intelligence artificielle, famille, ikigai, rêve, reblochon, musique, montagne, ski, voyage...">
+      <!-- Carte à gratter : le pinceau efface le cœur et révèle le rectangle
+           des passions (logique dans assets/main.js). Après 8 s sans peindre,
+           le cœur revient en fondu. Quatre couches superposées, de bas en
+           haut : la peinture du pinceau, le texte, le voile à effacer et la
+           copie du voile qui sert au fondu du retour. -->
+      <div id="coeurScratch" class="coeur-scratch relative max-w-2xl mx-auto mt-6">
+        <canvas id="coeurPeinture" aria-hidden="true"></canvas>
+        <p class="coeur-passions">Famille · Ikigai · Hacker · Musique · Mentalisme · Echecs · Randonné · Ski de piste · Trail · Informatique · Startup · Ski de fond · Famille · Montagne · Amis · Snowboard · Business · Reblochon · Basketball · Hypnose · Magie · Développement Personnel · Agence IA · Rêve lucide · Méditation · Intelligence Artificielle · Miel · Voyage · Lecture · Cinéma · Aviron · Escalade</p>
+        <canvas id="coeurVoile" aria-hidden="true"></canvas>
+        <canvas id="coeurRetour" class="coeur-retour" aria-hidden="true"></canvas>
       </div>
     </section>
 
