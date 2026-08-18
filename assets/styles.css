@@ -69,6 +69,28 @@ body {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* ===== Cadrage du portrait de la page d'accueil =====
+   La photo est plus haute que le cadre qui l'accueille : le navigateur en
+   coupe donc forcément une partie. La ligne ci-dessous choisit la zone
+   conservée.
+
+   C'est le DEUXIÈME nombre qu'il faut modifier (le premier gère la gauche
+   et la droite, il n'y a pas de raison d'y toucher) :
+
+       0 %   on garde le haut de la photo (surtout le mur)
+      50 %   on garde le milieu   <-- réglage actuel
+     100 %   on garde le bas (le banc et les jambes)
+
+   Pour REMONTER la photo (voir plus haut) : diminuez le nombre.
+   Pour la DESCENDRE (voir plus bas)       : augmentez le nombre.
+   Avancez par pas de 5 %, enregistrez, puis rechargez la page. */
+.portrait-cadrage {
+  object-position: 50% 50%; transform: scale(1.3)
+}
+#accueil > div:first-child {
+  overflow: hidden;
+}
+
 /* ===== Images noir et blanc qui se colorent au survol ===== */
 .img-bw {
   filter: grayscale(1);
